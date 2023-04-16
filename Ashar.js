@@ -108,16 +108,21 @@
                     thead.innerHTML += ` 
                 <tr>
                     <td style="text-align: center; border-right: 2px solid rgb(18, 131, 255); height: 6rem; border-bottom: 2px solid rgb(18, 131, 255); font-size: 20px;">
-                        ${obj.vote_average}
+                    ${obj.vote_average}
                     </td>
                     <td style="border-left: 2px solid rgb(18, 131, 255); border-right: 2px solid rgb(18, 131, 255); padding-left: 1.5rem; height: 6rem; border-bottom: 2px solid rgb(18, 131, 255); font-size: 20px; font-weight: bold;">
-                        <a style="text-decoration: none; color: rgb(18, 131, 255);" href="${obj.homepage}" target="_blank">${obj.title}</a>
-                        <p style="font-size: 15px; margin-top: 8px">${obj.genres}</p>
-                        <p style="border: 1px solid black; background-color: RGB(228, 228, 228); width: 6rem; text-align: center; font-size: 18px; margin-top: 8px; border-radius: 5px;">${obj.certification}</p>
-                        </td>
-                        <td style="border-left: 2px solid rgb(18, 131, 255); padding-left: 1.5rem; height: 6rem; border-bottom: 2px solid rgb(18, 131, 255); font-size: 20px;">
-                        ${obj.release_date.slice(0, 4)}
+                    <div style="display: flex; flex-direction: row; align-items: center">
+                        <img style="height: 12rem; margin-top: 1rem; margin-bottom: 1rem;" src="https://image.tmdb.org/t/p/original/${obj.poster_path}" alt="">
+                        <div style="margin-left: 2rem;">
+                            <a style="text-decoration: none; color: rgb(18, 131, 255);" href="${obj.homepage}" target="_blank">${obj.title}</a>
+                                <p style="font-size: 15px; margin-top: 8px">${obj.genres}</p>
+                                <p style="border: 1px solid black; background-color: RGB(228, 228, 228); width: 6rem; text-align: center; font-size: 18px; margin-top: 8px; border-radius: 5px;">${obj.certification}</p>
+                        </div>    
+                    </div>
                     </td>
+                <td style="border-left: 2px solid rgb(18, 131, 255); padding-left: 1.5rem; height: 6rem; border-bottom: 2px solid rgb(18, 131, 255); font-size: 20px;">
+                ${obj.release_date.slice(0, 4)}
+            </td>
                 </tr>
                 `
                 })
