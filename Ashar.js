@@ -22,25 +22,21 @@
 
     RATINGinput.addEventListener('change', function (e) {
         if (e.target.value == "") {
-            console.log("bhai kuch likh to sahi")
             e.target.value = "ALL"
         }
     })
     YEARinput.addEventListener('change', function (e) {
         if (e.target.value == "") {
-            console.log("bhai kuch likh to sahi")
             e.target.value = "ALL"
         }
     })
     LANGUAGEinput.addEventListener('change', function (e) {
         if (e.target.value == "") {
-            console.log("bhai kuch likh to sahi")
             e.target.value = "ALL"
         }
     })
     GENRESinput.addEventListener('change', function (e) {
         if (e.target.value == "") {
-            console.log("bhai kuch likh to sahi")
             e.target.value = "ALL"
         }
     })
@@ -72,7 +68,6 @@
             RATINGbrowsers.innerHTML += `<option value="${+(obj.vote_average)}">`
         }
     });
-
 
 
     btn.addEventListener('click', function () {
