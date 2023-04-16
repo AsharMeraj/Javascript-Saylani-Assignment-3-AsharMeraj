@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="Ashar.js" defer></script>
+    <title>Get Movies</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #heading {
+            width: fit-content;
+            margin: auto;
+            margin-top: 4rem;
+            font-size: 3rem;
+            color: rgb(18, 131, 255);
+        }
+        .listBox{
+            display: flex;
+            flex-direction: column;
+        }
+        .label{
+            font-weight: bold;
+            color: black;
+            width: fit-content;
+        }
+        .input{
+            width: 20rem;
+            height: 2rem;
+            border: 3px solid rgb(18, 131, 255);
+            padding-left: 10px;
+            font-size: 18px;
+        }
+        #listSection{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 70rem;
+            margin: auto;
+            margin-top: 3rem;
+        }
+        #RATINGinput{
+            height: 2rem;
+            width: 70rem;
+            border: 3px solid rgb(18, 131, 255);
+            padding-left: 10px;
+            font-size: 18px;
+        }
+        #listBox{
+            display: flex;
+            flex-direction: column;
+            width: fit-content;
+            margin: auto;
+            margin-top: 1.5rem;
+        }
+        
+    </style>
+</head>
+
+<body style="padding-left: 6rem; padding-right: 6rem; padding-bottom: 7rem;">
+    <h1 id="heading">Get Movies</h1>
+    <div id="listSection">
+
+        <div class="listBox">
+            <label class="label" for="GENREinput">GENRE</label>
+            <input id="GENRESinput" class="input" list="GENRESbrowsers">
+            <datalist id="GENRESbrowsers">
+                <option value="ALL"></option>
+            </datalist>
+        </div>
+        
+        <div class="listBox">
+            <label class="label" for="YEARinput">YEAR</label>
+            <input id="YEARinput" class="input" list="YEARbrowsers">
+            <datalist id="YEARbrowsers">
+                <option value="ALL"></option>
+            </datalist>
+        </div>
+
+        <div class="listBox">
+            <label class="label" for="LANGUAGEinput">LANGUAGE</label>
+            <input id="LANGUAGEinput" class="input" list="LANGUAGEbrowsers">
+            <datalist id="LANGUAGEbrowsers">
+                <option value="ALL"></option>
+            </datalist>
+        </div>
+    </div>
+    <div id="listBox">
+        <label class="label" for="input">RATING</label>
+        <input id="RATINGinput" list="RATINGbrowsers">
+        <datalist id="RATINGbrowsers">
+            <option value="ALL"></option>
+        </datalist>
+    </div>
+
+    <p id="warning" style="width: fit-content; margin: auto ; color: red; font-size: 20px; margin-top: 3rem; display: none;">*Please don't leave every field to "ALL" because there is to much data which hanged the browser</p>
+
+
+    <button id="btn" style="background-color: rgb(18, 131, 255); width: fit-content; margin: auto; display: block; margin-top: 3rem; padding-left: 2rem; padding-right: 2rem; padding-top: 1rem; padding-bottom: 1rem; border: 2px solid blue; border-radius: 10px; cursor: pointer; color: white;">SEARCH</button>
+    <table style="width: 100%; margin: auto; margin-top: 3rem; height: full;">
+        <thead id="thead">
+            <tr>
+                <th style="font-size: 20px; border: 2px solid rgb(18, 131, 255); text-align: center; width: 8rem; height: 6rem;">RANK</th>
+                <th style="font-size: 20px; border: 2px solid rgb(18, 131, 255); text-align: start; padding-left: 1.5rem; height: 6rem;">MOVIES</th>
+                <th style="font-size: 20px; border: 2px solid rgb(18, 131, 255); text-align: start; padding-left: 1.5rem; width: 12rem; height: 6rem;">YEAR</th>
+            </tr>
+        </thead>
+    </table>
+
+</body>
+
+</html>
